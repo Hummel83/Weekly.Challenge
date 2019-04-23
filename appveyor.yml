@@ -4,11 +4,11 @@ before_build:
 - nuget restore
 
 build:
-  project: CodingExercise.sln
+  project: WeeklyChallenge.sln
   verbosity: minimal
 
 test_script:
-- .\packages\OpenCover.4.7.922\tools\OpenCover.Console.exe -register:user -target:".\packages\xunit.runner.console.2.4.1\tools\net472\xunit.console.x86.exe" -targetargs:".\UnitTests\bin\Debug\UnitTests.dll -noshadow" -output:".\MyProject_coverage.xml"
+- .\packages\OpenCover.4.7.922\tools\OpenCover.Console.exe -register:user -target:".\packages\xunit.runner.console.2.4.1\tools\net472\xunit.console.x86.exe" -targetargs:".\WeeklyChallenge.Tests\bin\Debug\UnitTests.dll -noshadow" -output:".\MyProject_coverage.xml"
 
 
 #upload report
