@@ -26,5 +26,15 @@ namespace TextFileChallenge
             usersListBox.DataSource = users;
             usersListBox.DisplayMember = nameof(UserModel.DisplayText);
         }
+
+        private void AddUserButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveListButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.headerLabel = new System.Windows.Forms.Label();
             this.usersListBox = new System.Windows.Forms.ListBox();
+            this.userModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.firstNameText = new System.Windows.Forms.TextBox();
             this.lastNameText = new System.Windows.Forms.TextBox();
@@ -41,9 +42,8 @@
             this.isAliveCheckbox = new System.Windows.Forms.CheckBox();
             this.addUserButton = new System.Windows.Forms.Button();
             this.saveListButton = new System.Windows.Forms.Button();
-            this.userModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.agePicker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userModelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agePicker)).BeginInit();
             this.SuspendLayout();
             // 
             // headerLabel
@@ -59,13 +59,16 @@
             // usersListBox
             // 
             this.usersListBox.DataSource = this.userModelBindingSource;
-            this.usersListBox.DisplayMember = "DisplayText";
             this.usersListBox.FormattingEnabled = true;
             this.usersListBox.ItemHeight = 36;
             this.usersListBox.Location = new System.Drawing.Point(465, 119);
             this.usersListBox.Name = "usersListBox";
             this.usersListBox.Size = new System.Drawing.Size(405, 400);
             this.usersListBox.TabIndex = 1;
+            // 
+            // userModelBindingSource
+            // 
+            this.userModelBindingSource.DataSource = typeof(TextFileChallenge.UserModel);
             // 
             // firstNameLabel
             // 
@@ -78,14 +81,14 @@
             // 
             // firstNameText
             // 
-            this.firstNameText.Location = new System.Drawing.Point(188, 116);
+            this.firstNameText.Location = new System.Drawing.Point(206, 114);
             this.firstNameText.Name = "firstNameText";
             this.firstNameText.Size = new System.Drawing.Size(236, 41);
             this.firstNameText.TabIndex = 3;
             // 
             // lastNameText
             // 
-            this.lastNameText.Location = new System.Drawing.Point(188, 181);
+            this.lastNameText.Location = new System.Drawing.Point(204, 181);
             this.lastNameText.Name = "lastNameText";
             this.lastNameText.Size = new System.Drawing.Size(236, 41);
             this.lastNameText.TabIndex = 5;
@@ -141,6 +144,7 @@
             this.addUserButton.TabIndex = 10;
             this.addUserButton.Text = "Add User";
             this.addUserButton.UseVisualStyleBackColor = true;
+            this.addUserButton.Click += new System.EventHandler(this.AddUserButton_Click);
             // 
             // saveListButton
             // 
@@ -150,10 +154,7 @@
             this.saveListButton.TabIndex = 11;
             this.saveListButton.Text = "Save List";
             this.saveListButton.UseVisualStyleBackColor = true;
-            // 
-            // userModelBindingSource
-            // 
-            this.userModelBindingSource.DataSource = typeof(TextFileChallenge.UserModel);
+            this.saveListButton.Click += new System.EventHandler(this.SaveListButton_Click);
             // 
             // ChallengeForm
             // 
@@ -177,8 +178,8 @@
             this.Name = "ChallengeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Text File Challenge by Tim Corey";
-            ((System.ComponentModel.ISupportInitialize)(this.agePicker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userModelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agePicker)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
