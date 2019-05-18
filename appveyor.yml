@@ -15,4 +15,4 @@ test_script:
 
 
 #upload report
-- .\packages\Codecov.1.5.0\tools\codecov.exe -f "MyProject_coverage.xml"
+- codecov -f ".\MyProject_coverage.xml"
