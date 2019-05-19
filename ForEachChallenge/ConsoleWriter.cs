@@ -8,5 +8,10 @@ namespace ForEach
         {
             Console.WriteLine(text);
         }
+
+        public void Read()
+        {
+            Console.ReadKey();
+        }
     }
 }
