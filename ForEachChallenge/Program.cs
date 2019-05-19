@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
 
 namespace ForEach
@@ -17,7 +17,8 @@ namespace ForEach
             {
                 cw.Write($"{item.Firstname} {item.Lastname}");
             }
-            Console.ReadKey();
+            cw.Read();
+            
         }
 
         private static IList<string> AllFirstname()

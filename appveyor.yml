@@ -8,15 +8,13 @@ image: Visual Studio 2017
 
 before_build:
 - nuget restore
-- choco install dotnetcore-sdk
-- choco install codecov
 
 build:
   project: WeeklyChallenge.sln
   verbosity: minimal
 
 test_script:
-- OpenCover.Console.exe -register:user -target:"C:/Program Files/dotnet/dotnet.exe" -targetargs:test  -output:".\MyProject_coverage.xml" -oldstyle
+- .\packages\OpenCover.4.7.922\tools\OpenCover.Console.exe -register:user -target:".\packages\xunit.runner.console.2.4.1\tools\net472\xunit.console.x86.exe" -targetargs:".\WeeklyChallenge.Tests\bin\Debug\WeeklyChallenge.Tests.dll -noshadow" -output:".\MyProject_coverage.xml"
 
 #upload report
 - codecov -f ".\MyProject_coverage.xml"

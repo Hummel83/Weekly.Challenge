@@ -77,6 +77,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Content Include="Files\AdvancedDataSet.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
