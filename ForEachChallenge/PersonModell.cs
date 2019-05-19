@@ -1,4 +1,6 @@
-﻿namespace ForEach
+﻿using ForEachChallenge.Interfaces;
+
+namespace ForEachChallenge
 {
     public class PersonModell : IPersonModell
     {
