@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TextFileChallenge
+﻿namespace TextFileChallenge
 {
     public class UserModel
     {
@@ -17,14 +11,11 @@ namespace TextFileChallenge
         {
             get
             {
-                string aliveStatus = "is dead";
+                var aliveStatus = "is dead";
 
-                if (IsAlive == true)
-                {
-                    aliveStatus = "is alive";
-                }
+                if (IsAlive) aliveStatus = "is alive";
 
-                return $"{ FirstName} { LastName } is { Age } and { aliveStatus }";
+                return $"{FirstName} {LastName} is {Age} and {aliveStatus}";
             }
         }
     }

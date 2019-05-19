@@ -1,10 +1,8 @@
-﻿
-namespace ForEach
+﻿namespace ForEach
 {
-    interface IWriter
+    internal interface IWriter
     {
         void Write(string text);
         void Read();
-
     }
 }

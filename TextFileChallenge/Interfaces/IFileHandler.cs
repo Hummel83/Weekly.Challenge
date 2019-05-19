@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace TextFileChallenge.Interfaces
 {
-    interface IFileHandler
+    internal interface IFileHandler
     {
         IList<UserModel> Read();
         void Write(IList<UserModel> userModels);
