@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using ForEachChallenge.Interfaces;
 
-namespace ForEach
+namespace ForEachChallenge
 {
     internal class Program
     {
@@ -9,38 +10,12 @@ namespace ForEach
             var people = new People(new List<IPersonModell>());
 
             IWriter cw = new ConsoleWriter();
+            var dataCreater = new DummyPersonCreater();
 
-            var allp = people.SetNames(AllFirstname(), AllLastname());
+            var allp = people.SetNames(dataCreater.AllFirstname(), dataCreater.AllLastname());
 
             foreach (var item in allp) cw.Write($"{item.Firstname} {item.Lastname}");
             cw.Read();
-        }
-
-        private static IList<string> AllFirstname()
-        {
-            var firstnames = new List<string>
-            {
-                "Jonny",
-                "Jonny1",
-                "Jonny2",
-                "Jonny2"
-            };
-
-            return firstnames;
-        }
-
-        private static IList<string> AllLastname()
-        {
-            var lastnames = new List<string>
-            {
-                "Roe",
-                "Mula",
-                "Jo",
-                "Joy"
-            };
-
-
-            return lastnames;
         }
     }
 }

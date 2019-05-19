@@ -1,4 +1,4 @@
-﻿namespace ForEach
+﻿namespace ForEachChallenge.Interfaces
 {
     internal interface IWriter
     {

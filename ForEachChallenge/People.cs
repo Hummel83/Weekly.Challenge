@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using ForEachChallenge.Interfaces;
 
-namespace ForEach
+namespace ForEachChallenge
 {
     public class People
     {

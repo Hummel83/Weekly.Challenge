@@ -38,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsoleWriter.cs" />
+    <Compile Include="DummyPersonCreater.cs" />
     <Compile Include="Interfaces\IPersonModell.cs" />
     <Compile Include="Interfaces\IWriter.cs" />
     <Compile Include="People.cs" />

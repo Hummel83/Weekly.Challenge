@@ -1,6 +1,7 @@
 ﻿using System;
+using ForEachChallenge.Interfaces;
 
-namespace ForEach
+namespace ForEachChallenge
 {
     internal class ConsoleWriter : IWriter
     {
