@@ -10,11 +10,9 @@ namespace WeeklyChallengeTests.ForEach
         [Fact]
         public void GetFullPeopleCollection()
         {
-            // Arrange
             var dpc = new DummyPersonCreater();
             var people = new People(new List<IPersonModell>());
-
-            //Act
+           
             var testtarget = people.SetNames(dpc.AllFirstname(), dpc.AllLastname()).Count;
 
             Assert.Equal(4, testtarget);
