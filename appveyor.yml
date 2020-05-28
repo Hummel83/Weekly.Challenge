@@ -4,7 +4,7 @@ branches:
   only:
   - master
 
-image: Visual Studio 2017
+image: Visual Studio 2019
 
 before_build:
 - nuget restore
@@ -17,4 +17,4 @@ test_script:
 - .\packages\OpenCover.4.7.922\tools\OpenCover.Console.exe -register:user -target:".\packages\xunit.runner.console.2.4.1\tools\net472\xunit.console.x86.exe" -targetargs:".\WeeklyChallengeTests\bin\Debug\WeeklyChallengeTests.dll -noshadow" -output:".\MyProject_coverage.xml"
 
 #upload report
-- .\packages\Codecov.1.5.0\tools\codecov.exe -f "MyProject_coverage.xml"
+- .\packages\Codecov.1.10.0\tools\codecov.exe -f "MyProject_coverage.xml"

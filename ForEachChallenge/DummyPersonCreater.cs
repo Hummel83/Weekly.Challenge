@@ -11,7 +11,7 @@ namespace ForEachChallenge
                 "Jonny",
                 "Jonny1",
                 "Jonny2",
-                "Jonny2"
+                "Jonny3"
             };
         }
 

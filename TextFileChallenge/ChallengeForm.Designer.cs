@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.headerLabel = new System.Windows.Forms.Label();
             this.usersListBox = new System.Windows.Forms.ListBox();
-            this.userModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.firstNameText = new System.Windows.Forms.TextBox();
             this.lastNameText = new System.Windows.Forms.TextBox();
@@ -42,8 +41,9 @@
             this.isAliveCheckbox = new System.Windows.Forms.CheckBox();
             this.addUserButton = new System.Windows.Forms.Button();
             this.saveListButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.userModelBindingSource)).BeginInit();
+            this.userModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.agePicker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // headerLabel
@@ -65,10 +65,6 @@
             this.usersListBox.Name = "usersListBox";
             this.usersListBox.Size = new System.Drawing.Size(405, 400);
             this.usersListBox.TabIndex = 1;
-            // 
-            // userModelBindingSource
-            // 
-            this.userModelBindingSource.DataSource = typeof(TextFileChallenge.UserModel);
             // 
             // firstNameLabel
             // 
@@ -156,6 +152,10 @@
             this.saveListButton.UseVisualStyleBackColor = true;
             this.saveListButton.Click += new System.EventHandler(this.SaveListButton_Click);
             // 
+            // userModelBindingSource
+            // 
+            this.userModelBindingSource.DataSource = typeof(TextFileChallenge.UserModel);
+            // 
             // ChallengeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 36F);
@@ -178,8 +178,8 @@
             this.Name = "ChallengeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Text File Challenge by Tim Corey";
-            ((System.ComponentModel.ISupportInitialize)(this.userModelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agePicker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userModelBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
