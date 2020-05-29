@@ -1,26 +1,42 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
+using CsvHelper;
 using TextFileChallenge.Interfaces;
+
 
 namespace TextFileChallenge
 {
-    internal class csvHandler : IFileHandler
+    public class CsvHandler : IFileHandler
     {
-        public csvHandler(IList<UserModel> userModels)
+        private  List<UserModel> _userModels;
+        private  string _filePath;
+        public CsvHandler(List<UserModel> userModels, string filePath)
         {
-            UserModels = userModels;
+            _userModels = userModels;
+            _filePath = filePath;
         }
 
-        public IList<UserModel> UserModels { get; }
+        public List<UserModel> UserModels => _userModels;
 
-        public IList<UserModel> Read()
+        public void Read()
         {
-            throw new NotImplementedException();
+            using (var reader = new StreamReader(_filePath))
+            {
+                using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                {
+                    foreach (var Records in csv.GetRecords<UserModel>())
+                    {
+                        _userModels.Add(Records);
+                    }
+                }
+            }
         }
 
-        public void Write(IList<UserModel> userModels)
+        public void Write()
         {
-            throw new NotImplementedException();
+           
         }
     }
 }
