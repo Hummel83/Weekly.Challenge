@@ -14,7 +14,7 @@ build:
   verbosity: minimal
 
 test_script:
-- .\packages\OpenCover.4.7.922\tools\OpenCover.Console.exe -register:user -target:".\packages\xunit.runner.console.2.4.1\tools\net472\xunit.console.x86.exe" -targetargs:".\WeeklyChallengeTests\bin\Debug\WeeklyChallengeTests.dll -noshadow" -output:".\MyProject_coverage.xml"
+- .\packages\OpenCover.4.7.922\tools\OpenCover.Console.exe -register:administrator -target:".\packages\xunit.runner.console.2.4.1\tools\net472\xunit.console.x86.exe" -targetargs:".\WeeklyChallengeTests\bin\Debug\WeeklyChallengeTests.dll -noshadow" -output:".\MyProject_coverage.xml"
 
 #upload report
 - .\packages\Codecov.1.10.0\tools\codecov.exe -f "MyProject_coverage.xml"
