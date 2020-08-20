@@ -12,7 +12,7 @@ namespace WeeklyChallengeTests.ForEach
         {
             var dpc = new DummyPersonCreater();
             var people = new People(new List<IPersonModell>());
-           
+
             var testtarget = people.SetNames(dpc.AllFirstname(), dpc.AllLastname()).Count;
 
             Assert.Equal(4, testtarget);

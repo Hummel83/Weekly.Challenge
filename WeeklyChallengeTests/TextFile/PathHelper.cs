@@ -5,10 +5,10 @@ using System.Reflection;
 
 namespace WeeklyChallengeTests.TextFile
 {
-    public class PathHelper 
+    public class PathHelper
     {
-        private string _binPath;
         private readonly IList<string> _csvCompletePath = new List<string>();
+        private string _binPath;
         private string _filePath;
 
         public string BinPath
@@ -26,6 +26,7 @@ namespace WeeklyChallengeTests.TextFile
 
             return csvFiles;
         }
+
         public string[] GetAllFileNamePath()
         {
             SetTestFilePath();
@@ -53,10 +54,7 @@ namespace WeeklyChallengeTests.TextFile
         public IList<string> GetCsvFileCollection(string FilePath)
         {
             var fileCol = GetAllFileNames();
-            foreach (var fileColItem in fileCol)
-            {
-                _csvCompletePath.Add(FilePath + fileColItem);
-            }
+            foreach (var fileColItem in fileCol) _csvCompletePath.Add(FilePath + fileColItem);
 
             return _csvCompletePath;
         }
