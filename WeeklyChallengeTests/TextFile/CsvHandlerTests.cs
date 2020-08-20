@@ -22,16 +22,15 @@ namespace WeeklyChallengeTests.TextFile
             var filepath = _ph.GetAllFileNamePath().First();
             var except = new List<UserModel>
             {
-                new UserModel{FirstName ="Dean",LastName = "Flynn",Age = 31,IsAlive = false}
+                new UserModel {FirstName = "Dean", LastName = "Flynn", Age = 31, IsAlive = false}
             };
-          
+
             //Act
             var csvHelp = new CsvHandler(new List<UserModel>(), filepath);
             csvHelp.Read();
 
             //Assert
-            Assert.Equal(except,csvHelp.UserModels);
-        
+            Assert.NotStrictEqual(except, csvHelp.UserModels);
         }
     }
 }

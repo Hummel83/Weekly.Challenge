@@ -1,10 +1,8 @@
-﻿using System.Collections.Generic;
-
-namespace TextFileChallenge.Interfaces
+﻿namespace TextFileChallenge.Interfaces
 {
     internal interface IFileHandler
     {
-       void Read();
+        void Read();
         void Write();
     }
 }
