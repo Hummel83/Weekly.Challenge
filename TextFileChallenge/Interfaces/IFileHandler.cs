@@ -3,6 +3,7 @@
     internal interface IFileHandler
     {
         void Read();
+
         void Write();
     }
 }

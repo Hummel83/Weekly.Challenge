@@ -1,5 +1,5 @@
-﻿using System;
-using ForEachChallenge.Interfaces;
+﻿using ForEachChallenge.Interfaces;
+using System;
 
 namespace ForEachChallenge
 {

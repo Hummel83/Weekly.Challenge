@@ -36,12 +36,10 @@ namespace WeeklyChallengeTests.TextFile
             return csvpath;
         }
 
-
         private void SetTestFilePath()
         {
             _filePath = BinPath + "\\Files\\";
         }
-
 
         private string GetBinPath()
         {

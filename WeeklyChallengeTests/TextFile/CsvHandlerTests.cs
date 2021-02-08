@@ -14,7 +14,6 @@ namespace WeeklyChallengeTests.TextFile
 
         private readonly PathHelper _ph;
 
-
         [Fact]
         public void ReadFirstCsvFile()
         {

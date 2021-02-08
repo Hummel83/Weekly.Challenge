@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using ForEachChallenge;
+﻿using ForEachChallenge;
 using ForEachChallenge.Interfaces;
+using System.Collections.Generic;
 using Xunit;
 
 namespace WeeklyChallengeTests.ForEach

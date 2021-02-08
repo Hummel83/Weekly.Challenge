@@ -1,6 +1,6 @@
-﻿using System;
+﻿using ForEachChallenge.Interfaces;
+using System;
 using System.Collections.Generic;
-using ForEachChallenge.Interfaces;
 
 namespace ForEachChallenge
 {
@@ -17,10 +17,10 @@ namespace ForEachChallenge
         {
             if (firstname.Count <= lastname.Count)
                 for (var i = 0; i < lastname.Count; i++)
-                    _persons.Add(new PersonModell {Firstname = firstname[i], Lastname = lastname[i]});
+                    _persons.Add(new PersonModell { Firstname = firstname[i], Lastname = lastname[i] });
             else
                 for (var i = 0; i < firstname.Count; i++)
-                    _persons.Add(new PersonModell {Firstname = firstname[i], Lastname = lastname[i]});
+                    _persons.Add(new PersonModell { Firstname = firstname[i], Lastname = lastname[i] });
 
             return _persons;
         }

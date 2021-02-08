@@ -24,7 +24,7 @@ namespace WeeklyChallengeTests.TextFile
         [Fact]
         public void GetAllFileNameTest()
         {
-            var except = new List<string> {"0DataSet.csv", "1StandardDataSet.csv", "2AdvancedDataSet.csv"};
+            var except = new List<string> { "0DataSet.csv", "1StandardDataSet.csv", "2AdvancedDataSet.csv" };
             var testFile = _ph.GetAllFileNames();
 
             for (var i = 0; i < except.Count; i++) Assert.Equal(testFile[i], except[i]);

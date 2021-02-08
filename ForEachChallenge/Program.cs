@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using ForEachChallenge.Interfaces;
+﻿using ForEachChallenge.Interfaces;
+using System.Collections.Generic;
 
 namespace ForEachChallenge
 {
